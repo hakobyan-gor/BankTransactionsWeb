@@ -1,0 +1,224 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.G-flex {
+  display: flex;
+}
+
+.G-inline-flex {
+  display: inline-flex;
+}
+
+.G-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.G-justify-start {
+  justify-content: flex-start;
+}
+
+.G-justify-center {
+  justify-content: center;
+}
+
+.G-justify-between {
+  justify-content: space-between;
+}
+
+.G-justify-around {
+  justify-content: space-around;
+}
+
+.G-justify-end {
+  justify-content: flex-end;
+}
+
+.G-align-center {
+  align-items: center;
+}
+
+.G-align-start {
+  align-items: flex-start;
+}
+
+.G-align-end {
+  align-items: flex-end;
+}
+
+.G-flex-column {
+  flex-direction: column;
+}
+
+.G-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.G-direction-column {
+  flex-direction: column;
+}
+
+.G-relative {
+  position: relative;
+}
+
+.G-mb-1 {
+  margin-bottom: 10px;
+}
+
+.G-mb-2 {
+  margin-bottom: 20px;
+}
+
+.G-mb-3 {
+  margin-bottom: 30px;
+}
+
+.G-mb-4 {
+  margin-bottom: 40px;
+}
+
+.G-mb-5 {
+  margin-bottom: 50px;
+}
+
+.G-mb-6 {
+  margin-bottom: 60px;
+}
+
+.G-mb-7 {
+  margin-bottom: 70px;
+}
+
+.G-mb-8 {
+  margin-bottom: 80px;
+}
+
+.G-mb-9 {
+  margin-bottom: 90px;
+}
+
+.G-mb-10 {
+  margin-bottom: 100px;
+}
+
+.G-mt-1 {
+  margin-top: 10px;
+}
+
+.G-mt-2 {
+  margin-top: 20px;
+}
+
+.G-mt-3 {
+  margin-top: 30px;
+}
+
+.G-mt-4 {
+  margin-top: 40px;
+}
+
+.G-mt-5 {
+  margin-top: 50px;
+}
+
+.G-mt-6 {
+  margin-top: 60px;
+}
+
+.G-mt-7 {
+  margin-top: 70px;
+}
+
+.G-mt-8 {
+  margin-top: 80px;
+}
+
+.G-mt-9 {
+  margin-top: 90px;
+}
+
+.G-mt-10 {
+  margin-top: 100px;
+}
+
+.G-mr-1 {
+  margin-right: 10px;
+}
+
+.G-mr-2 {
+  margin-right: 20px;
+}
+
+.G-mr-3 {
+  margin-right: 30px;
+}
+
+.G-mr-4 {
+  margin-right: 40px;
+}
+
+.G-mr-5 {
+  margin-right: 50px;
+}
+
+.G-mr-6 {
+  margin-right: 60px;
+}
+
+.G-ml-1 {
+  margin-left: 10px;
+}
+
+.G-ml-2 {
+  margin-left: 20px;
+}
+
+.G-ml-3 {
+  margin-left: 30px;
+}
+
+.G-ml-4 {
+  margin-left: 40px;
+}
+
+.G-ml-5 {
+  margin-left: 50px;
+}
+
+.G-ml-6 {
+  margin-left: 60px;
+}
+
+.G-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FFFFFF30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.G-cursor {
+  cursor: pointer;
+}
+
+.snackbar-error {
+  color: #FFFFFF;
+  background: #D32F2F;
+}

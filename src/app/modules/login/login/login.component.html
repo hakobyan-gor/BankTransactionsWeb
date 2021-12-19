@@ -1,0 +1,41 @@
+<div class="P-login G-flex G-center">
+  <mat-card class="P-content G-relative">
+    <mat-toolbar color="primary">
+      <span>Login</span>
+    </mat-toolbar>
+    <div class="P-form">
+      <form (ngSubmit)="submit()" [formGroup]="reqData.form">
+        <div class="G-mb-2">
+          <mat-form-field appearance="legacy">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" type="text" formControlName="username" [errorStateMatcher]="reqData.matcher">
+            <mat-error *ngIf="reqData.form.get('username')!.hasError('required')">
+              Username is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="reqData.form.get('username')!.hasError('minlength')">
+              Username must contain at last <strong>4</strong> characters
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="G-mb-2">
+          <mat-form-field appearance="legacy">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" type="password" formControlName="password" [errorStateMatcher]="reqData.matcher">
+            <mat-error *ngIf="reqData.form.get('password')!.hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="reqData.form.get('password')!.hasError('minlength')">
+              Password must contain at last <strong>6</strong> characters
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="G-flex G-justify-end">
+          <button mat-raised-button color="primary" type="submit">Sign in</button>
+        </div>
+      </form>
+    </div>
+    <div class="G-spinner" *ngIf="reqData.inProgress">
+      <mat-spinner [strokeWidth]="7"></mat-spinner>
+    </div>
+  </mat-card>
+</div>

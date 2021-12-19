@@ -1,0 +1,35 @@
+<ng-container *ngIf="data">
+  <div class="G-flex G-justify-between">
+    <h1>Accounts</h1>
+    <button mat-stroked-button color="primary" (click)="openCreateAccountDialog()">Add new account</button>
+  </div>
+
+  <mat-card class="G-mb-4">
+    <div class="G-mb-1">First name: {{ data.firstName }}</div>
+    <div class="G-mb-1">Last name: {{ data.lastName }}</div>
+    <div class="G-mb-1">Email: {{ data.email }}</div>
+    <div class="G-mb-1">Created date {{ data.createdDate | date:'dd MMMM yyyy HH:mm' }}</div>
+  </mat-card>
+
+  <mat-card>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="currency">
+        <th mat-header-cell *matHeaderCellDef>Currency</th>
+        <td mat-cell *matCellDef="let element">{{ element.currency }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="createdDate">
+        <th mat-header-cell *matHeaderCellDef>Created date</th>
+        <td mat-cell *matCellDef="let element">{{ element.createdDate | date:'dd MMMM yyyy HH:mm' }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card>
+</ng-container>
+
+<div class="G-spinner" *ngIf="!data || inProgress">
+  <mat-spinner [strokeWidth]="7"></mat-spinner>
+</div>

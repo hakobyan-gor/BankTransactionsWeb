@@ -1,0 +1,41 @@
+<div class="G-relative">
+  <h1 mat-dialog-title>Create user</h1>
+  <div mat-dialog-content>
+    <form (ngSubmit)="submit()" [formGroup]="reqData.form">
+      <div class="G-mb-2">
+        <mat-form-field appearance="legacy">
+          <mat-label>First name</mat-label>
+          <input matInput placeholder="First name" type="text" formControlName="firstName" [errorStateMatcher]="reqData.matcher">
+          <mat-error *ngIf="reqData.form.get('firstName')!.hasError('required')">
+            First name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="G-mb-2">
+        <mat-form-field appearance="legacy">
+          <mat-label>Last name</mat-label>
+          <input matInput placeholder="Last name" type="text" formControlName="lastName" [errorStateMatcher]="reqData.matcher">
+          <mat-error *ngIf="reqData.form.get('lastName')!.hasError('required')">
+            Last name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="G-mb-2">
+        <mat-form-field appearance="legacy">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" type="text" formControlName="firstName" [errorStateMatcher]="reqData.matcher">
+          <mat-error *ngIf="reqData.form.get('email')!.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="G-flex G-justify-end">
+        <button mat-button (click)="onCancel()" type="button">Cancel</button>
+        <button mat-stroked-button color="primary" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+  <div class="G-spinner" *ngIf="reqData.inProgress">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>
